@@ -109,7 +109,7 @@ func getReportsByUserId(w http.ResponseWriter, r *http.Request) {
 
 func getTaskByReportId(w http.ResponseWriter, r *http.Request) {
 	reportId := pat.Param(r, "reportId")
-	print("Pegou o user de id %s", reportId)
+	print("Get taks do report %s", reportId)
 }
 
 func createReport(w http.ResponseWriter, r *http.Request) {
