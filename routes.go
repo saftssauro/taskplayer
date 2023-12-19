@@ -150,12 +150,12 @@ func completeTask(w http.ResponseWriter, r *http.Request) {
 }
 
 func addRoutes(mux *goji.Mux) {
-	mux.HandleFunc(pat.Post("/user/"), createUser)
-	mux.HandleFunc(pat.Get("/reports/:userId/"), getReportsByUserId)
-	mux.HandleFunc(pat.Post("/reports/"), createReport)
-	mux.HandleFunc(pat.Get("/reports/:reportId/tasks/"), getTaskByReportId)
-	mux.HandleFunc(pat.Post("/tasks/"), createTask)
-	mux.HandleFunc(pat.Patch("/tasks/"), completeTask)
+	mux.HandleFunc(pat.Post("/user"), createUser)
+	mux.HandleFunc(pat.Get("/reports/:userId"), getReportsByUserId)
+	mux.HandleFunc(pat.Post("/reports"), createReport)
+	mux.HandleFunc(pat.Get("/reports/:reportId/tasks"), getTaskByReportId)
+	mux.HandleFunc(pat.Post("/tasks"), createTask)
+	mux.HandleFunc(pat.Patch("/tasks"), completeTask)
 }
 
 func main() {
