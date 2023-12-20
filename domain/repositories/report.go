@@ -11,8 +11,8 @@ type iReportsRepository interface {
 }
 
 type ReportsRepository struct {
-	iReportsRepository
 	remoteProvider providers.RemoteProvider
+	iReportsRepository
 }
 
 func (reportsRepository ReportsRepository) New(remoteProvider providers.RemoteProvider) *ReportsRepository {

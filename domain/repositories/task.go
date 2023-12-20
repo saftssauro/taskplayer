@@ -11,8 +11,8 @@ type iTasksRepository interface {
 }
 
 type TasksRepository struct {
-	iTasksRepository
 	remoteProvider providers.RemoteProvider
+	iTasksRepository
 }
 
 func (reportsRepository TasksRepository) New(remoteProvider providers.RemoteProvider) *TasksRepository {
